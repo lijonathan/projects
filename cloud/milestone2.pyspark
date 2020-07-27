@@ -1,0 +1,74 @@
+from math import sqrt
+
+#read testfile
+myfile="file:/home/training/FINAL/TestingRatings.txt"
+
+#generate[(item1,item2),(rating1,rating2)]
+def itempair(ratings):
+    rating = ratings[1]
+    (item1,rating1) = rating[0]
+    (item2,rating2) = rating[1]
+    return((item1,item2),(rating1,rating2))
+
+#delete same [(item1,item2),(rating1,rating2)] pairs
+def filterdup(ratings):
+    rating = ratings[1]
+    (item1,rating1) = rating[0]
+    (item2,rating2) = rating[1]
+    return item1 < item2  
+
+#compute consine similarity
+def computeconsinesimilarity(itemids,ratings):
+    numpairs = len(ratings)
+    sum_xx=sum_yy=sum_xy=0
+    if (numpairs>1):
+        for ratingx, ratingy in ratings:
+            sum_xx += ratingx * ratingx
+            sum_yy += ratingy * ratingy
+            sum_xy += ratingx * ratingy
+        
+    n=sum_xy
+    s=0
+    d=sqrt(sum_xx)*sqrt(sum_yy)
+    if(d):
+       s=(n/d)
+       return (itemids,s)
+
+#generate (itemid,(userid,ratings)) pairs
+items = sc.textFile(myfile).map(lambda line: line.split(','))\
+   .map(lambda ids: (ids[0],(ids[1],ids[2])))\
+   .distinct()\
+   .groupByKey()
+
+#generate (userid,(itemid,ratings)) pairs
+users = sc.textFile(myfile).map(lambda line: line.split(','))\
+   .map(lambda ids: (ids[1],(ids[0],ids[2])))\
+   .distinct()\
+   .groupByKey()
+
+#generate (userid,(itemid,ratings)) pairs
+ratings = sc.textFile(myfile).map(lambda line: line.split(','))\
+   .map(lambda ids: (int(ids[1]),(int(ids[0]),float(ids[2]))))
+
+#generate(userid,(item1,rating1)(item2,rating2))
+joinedRatings = ratings.join(ratings)
+
+#delete (userid,(item1,rating1)(item1,rating1)) pairs
+onlyjoinedratings = joinedRatings.filter(lambda x:filterdup(x))
+
+#generate((item1,item2),(rating1,rating2)) pairs
+itempairs = onlyjoinedratings.map(lambda x:itempair(x))
+
+#generate((item1,iten2),((rating1,rating2),(rating1,rating2)...))
+itempairsratings = itempairs.groupByKey().mapValues(list)
+
+#generate((item1,item2),consin similarity)
+itemsimilarities = itempairsratings.map(lambda (itemids,ratings):computeconsinesimilarity(itemids,ratings)).filter(lambda x:x)
+
+
+
+
+
+
+
+
