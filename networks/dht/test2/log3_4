@@ -1,0 +1,31 @@
+/192.168.2.4:45918 sending packet to /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:100
+
+/192.168.2.4:45918 received packet from /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:success
+tag:2
+hashRange:1073741824:2147483647
+succInfo:192.168.7.1:36859:0
+ttl:99
+
+rteTbl=[(/192.168.7.1:36859,0)]
+/192.168.2.4:45918 received packet from /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:success
+tag:4
+hashRange:536870912:1073741823
+succInfo:192.168.2.4:45918:1073741824
+ttl:99
+
+/192.168.2.4:45918 sending packet to null
+CSE473 DHTPv0.1
+type:success
+tag:4
+hashRange:536870912:1073741823
+succInfo:192.168.2.4:45918:1073741824
+ttl:99
+

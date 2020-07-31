@@ -1,0 +1,23 @@
+/192.168.5.2:50878 sending packet to /192.168.1.1:38047
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:100
+
+/192.168.5.2:50878 received packet from /192.168.1.1:38047
+CSE473 DHTPv0.1
+type:success
+tag:4
+hashRange:1744830464:1879048191
+succInfo:192.168.5.2:54061:1879048192
+ttl:99
+
+rteTbl=[(/192.168.5.2:54061,1879048192)]
+/192.168.5.2:50878 received packet from /192.168.1.1:38047
+CSE473 DHTPv0.1
+type:transfer
+key:fantasy
+val:football
+tag:6
+ttl:99
+

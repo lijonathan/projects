@@ -1,0 +1,21 @@
+/192.168.3.2:49473 sending packet to /192.168.7.1:40168
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:100
+
+/192.168.3.2:49473 received packet from /192.168.4.2:51563
+CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+ttl:99
+
+DhtServer join failed after recieving packet: CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+ttl:99
+

@@ -1,0 +1,113 @@
+/127.0.0.1:51384 sending packet to /127.0.0.1:51382
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:100
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51382
+CSE473 DHTPv0.1
+type:success
+hashRange:536870912:1073741823
+succInfo:127.0.0.1:51383:1073741824
+ttl:99
+
+rteTbl=[(/127.0.0.1:51383,1073741824)]
+/127.0.0.1:51384 received packet from /127.0.0.1:51387
+CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+ttl:99
+
+/127.0.0.1:51384 sending packet to /127.0.0.1:51383
+CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+clientAdr:127.0.0.1:51387
+relayAdr:127.0.0.1:51384
+ttl:99
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51382
+CSE473 DHTPv0.1
+type:success
+key:who
+val:hah
+tag:12345
+clientAdr:127.0.0.1:51387
+relayAdr:127.0.0.1:51384
+senderInfo:127.0.0.1:51382:0
+ttl:95
+
+rteTbl=[(/127.0.0.1:51383,1073741824), (/127.0.0.1:51382,0)]
+/127.0.0.1:51384 sending packet to /127.0.0.1:51387
+CSE473 DHTPv0.1
+type:success
+key:who
+val:hah
+tag:12345
+ttl:95
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51382
+CSE473 DHTPv0.1
+type:put
+key:junk
+val:mail
+tag:12345
+clientAdr:127.0.0.1:51388
+relayAdr:127.0.0.1:51385
+ttl:97
+
+/127.0.0.1:51384 sending packet to /127.0.0.1:51385
+CSE473 DHTPv0.1
+type:success
+key:junk
+val:mail
+tag:12345
+clientAdr:127.0.0.1:51388
+relayAdr:127.0.0.1:51385
+ttl:97
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51393
+CSE473 DHTPv0.1
+type:get
+key:blue
+tag:12345
+ttl:99
+
+/127.0.0.1:51384 sending packet to /127.0.0.1:51383
+CSE473 DHTPv0.1
+type:get
+key:blue
+tag:12345
+clientAdr:127.0.0.1:51393
+relayAdr:127.0.0.1:51384
+ttl:99
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51383
+CSE473 DHTPv0.1
+type:success
+key:blue
+val:moose
+tag:12345
+clientAdr:127.0.0.1:51393
+relayAdr:127.0.0.1:51384
+ttl:97
+
+/127.0.0.1:51384 sending packet to /127.0.0.1:51393
+CSE473 DHTPv0.1
+type:success
+key:blue
+val:moose
+tag:12345
+ttl:97
+
+/127.0.0.1:51384 received packet from /127.0.0.1:51399
+CSE473 DHTPv0.1
+type:get
+key:blue
+tag:12345
+ttl:99
+

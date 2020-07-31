@@ -1,0 +1,64 @@
+/192.168.7.1:36859 received packet from /192.168.2.4:45918
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:99
+
+/192.168.7.1:36859 sending packet to /192.168.2.4:45918
+CSE473 DHTPv0.1
+type:success
+tag:2
+hashRange:1073741824:2147483647
+succInfo:192.168.7.1:36859:0
+ttl:100
+
+/192.168.7.1:36859 sending packet to h7x1/192.168.7.1:36859
+CSE473 DHTPv0.1
+type:update
+tag:3
+ttl:100
+
+rteTbl=[(/192.168.2.4:45918,1073741824)]
+/192.168.7.1:36859 received packet from /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:update
+tag:3
+ttl:99
+
+/192.168.7.1:36859 received packet from /192.168.2.4:45918
+CSE473 DHTPv0.1
+type:join
+tag:1
+ttl:99
+
+/192.168.7.1:36859 sending packet to /192.168.2.4:45918
+CSE473 DHTPv0.1
+type:success
+tag:4
+hashRange:536870912:1073741823
+succInfo:192.168.2.4:45918:1073741824
+ttl:100
+
+/192.168.7.1:36859 sending packet to /192.168.2.4:45918
+CSE473 DHTPv0.1
+type:update
+tag:5
+ttl:100
+
+rteTbl=[(/192.168.2.4:45918,1073741824), (/192.168.2.4:45918,536870912)]
+/192.168.7.1:36859 received packet from /192.168.4.2:42870
+CSE473 DHTPv0.1
+type:put
+key:foo
+val:bar
+tag:12345
+ttl:99
+
+/192.168.7.1:36859 sending packet to /192.168.4.2:42870
+CSE473 DHTPv0.1
+type:success
+key:foo
+val:bar
+tag:12345
+ttl:99
+

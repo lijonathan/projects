@@ -1,0 +1,135 @@
+put foo bar
+/192.168.4.2:44267 sending packet to /192.168.7.1:57075
+CSE473 DHTPv0.1
+type:put
+key:foo
+val:bar
+tag:12345
+ttl:100
+
+/192.168.4.2:44267 received packet from /192.168.7.1:57075
+CSE473 DHTPv0.1
+type:success
+key:foo
+val:bar
+tag:12345
+ttl:98
+
+put who hah
+/192.168.4.2:55720 sending packet to /192.168.3.2:38344
+CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+ttl:100
+
+/192.168.4.2:55720 received packet from /192.168.3.2:38344
+CSE473 DHTPv0.1
+type:success
+key:who
+val:hah
+tag:12345
+ttl:92
+
+get foo
+/192.168.4.2:51158 sending packet to /192.168.1.1:57317
+CSE473 DHTPv0.1
+type:get
+key:foo
+tag:12345
+ttl:100
+
+/192.168.4.2:51158 received packet from /192.168.1.1:57317
+CSE473 DHTPv0.1
+type:success
+key:foo
+val:bar
+tag:12345
+ttl:95
+
+get who
+/192.168.4.2:43408 sending packet to /192.168.2.5:37960
+CSE473 DHTPv0.1
+type:get
+key:who
+tag:12345
+ttl:100
+
+/192.168.4.2:43408 received packet from /192.168.2.5:37960
+CSE473 DHTPv0.1
+type:success
+key:who
+val:hah
+tag:12345
+ttl:93
+
+get goodbye
+/192.168.4.2:35020 sending packet to /192.168.5.2:34857
+CSE473 DHTPv0.1
+type:get
+key:goodbye
+tag:12345
+ttl:100
+
+/192.168.4.2:35020 received packet from /192.168.5.2:34857
+CSE473 DHTPv0.1
+type:no match
+key:goodbye
+tag:12345
+ttl:96
+
+get
+/192.168.4.2:47868 sending packet to /192.168.1.1:57317
+CSE473 DHTPv0.1
+type:get
+tag:12345
+ttl:100
+
+/192.168.4.2:47868 received packet from /192.168.1.1:57317
+CSE473 DHTPv0.1
+type:failure
+tag:12345
+reason:gets and puts require key and tag
+ttl:98
+
+get bar
+/192.168.4.2:56626 sending packet to /192.168.7.1:57075
+CSE473 DHTPv0.1
+type:get
+key:bar
+tag:12345
+ttl:100
+
+/192.168.4.2:56626 received packet from /192.168.7.1:57075
+CSE473 DHTPv0.1
+type:no match
+key:bar
+tag:12345
+ttl:94
+
+put foo toast is tasty
+/192.168.4.2:54559 sending packet to /192.168.2.4:44881
+CSE473 DHTPv0.1
+type:put
+key:foo
+val:toast is tasty
+tag:12345
+ttl:100
+
+/192.168.4.2:54559 received packet from /192.168.2.4:44881
+CSE473 DHTPv0.1
+type:success
+key:foo
+val:toast is tasty
+tag:12345
+ttl:94
+
+get foo
+/192.168.4.2:54421 sending packet to /192.168.2.5:37960
+CSE473 DHTPv0.1
+type:get
+key:foo
+tag:12345
+ttl:100
+

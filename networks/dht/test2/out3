@@ -1,0 +1,34 @@
+put foo bar
+/192.168.4.2:42870 sending packet to /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:put
+key:foo
+val:bar
+tag:12345
+ttl:100
+
+/192.168.4.2:42870 received packet from /192.168.7.1:36859
+CSE473 DHTPv0.1
+type:success
+key:foo
+val:bar
+tag:12345
+ttl:98
+
+put who hah
+/192.168.4.2:51563 sending packet to /192.168.3.2:49473
+CSE473 DHTPv0.1
+type:put
+key:who
+val:hah
+tag:12345
+ttl:100
+
+get foo
+/192.168.4.2:44789 sending packet to /192.168.1.1:38875
+CSE473 DHTPv0.1
+type:get
+key:foo
+tag:12345
+ttl:100
+
