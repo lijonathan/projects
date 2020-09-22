@@ -1,0 +1,27 @@
+Ramona Durham
+431331
+Jonathan Li
+431166
+
+http://ec2-52-25-214-155.us-west-2.compute.amazonaws.com/~jonathanli
+
+Start of the website:
+http://ec2-52-25-214-155.us-west-2.compute.amazonaws.com/~jonathanli/login.php
+
+Description:
+Our creative portion consisted of making a profile page. Our profile page lists only the stories that belong to the user that is logged in.  They are able
+to create, edit, and delete their stories/comments.
+
+An account can be deleted with all its associated stories and comments.
+
+Login Details:
+You can register a new user.
+Or username: usernameone
+password: firstpassword
+
+or username: jonathanli
+password: jonathanwustl
+
+Both of these users have stories and comments that obviously indicate which user they belong to. You can delete/edit your own
+comments but not another user's.
+
